@@ -14,7 +14,7 @@
 
 extern "C" void __dtors_end();
 
-void reset(void) __attribute__((naked));
+void reset(void) __attribute__((used, naked));
 
 void reset(void) {
   asm("clr r1");
@@ -32,7 +32,7 @@ int main(void) {
 
 extern "C"  void _exit();
 
-void jmp_main(void) __attribute__((naked, section(".init9")));
+void jmp_main(void) __attribute__((used, naked, section(".init9")));
 
 void jmp_main(void) {
   main();
