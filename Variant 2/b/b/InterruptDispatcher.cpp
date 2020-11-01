@@ -139,5 +139,5 @@ ISR(NVMCTRL_EE_vect) {
 }
 
 ISR(BADISR_vect) {
-  while(1);
+  while(1);  // if needed, replace with a more sophisticated code to handle unexpected interrupts
 }
